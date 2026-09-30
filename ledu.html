@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>乐和乐都 10月1日 游玩攻略（双版本）</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; background:#F5F4F0; color:#2C2C2A; line-height:1.65; padding:16px 14px 40px; max-width:720px; margin:0 auto; }
+h1 { font-size:21px; font-weight:600; margin-bottom:4px; }
+.sub { font-size:13px; color:#5F5E5A; margin-bottom:16px; }
+h2 { font-size:16px; font-weight:600; margin:22px 0 10px; padding-left:10px; border-left:3px solid #1D9E75; }
+.card { background:#fff; border-radius:12px; padding:14px 16px; margin-bottom:12px; }
+.alert { background:#E6F1FB; border-radius:12px; padding:14px 16px; margin-bottom:12px; font-size:14px; }
+.warn { background:#FAEEDA; border-radius:12px; padding:14px 16px; margin-bottom:12px; font-size:14px; }
+.good { background:#E1F5EE; border-radius:12px; padding:14px 16px; margin-bottom:12px; font-size:14px; }
+.grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.kv { background:#F1EFE8; border-radius:10px; padding:10px 12px; }
+.kv .k { font-size:11px; color:#5F5E5A; }
+.kv .v { font-size:16px; font-weight:600; margin-top:2px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th,td { padding:7px 4px; text-align:center; border-bottom:1px solid #E8E6DF; }
+th { color:#5F5E5A; font-weight:500; font-size:11px; }
+td:first-child { text-align:left; font-weight:500; }
+.rain { color:#185FA5; background:#E6F1FB; }
+.dry { color:#0F6E56; background:#E1F5EE; }
+.tabs { display:flex; gap:8px; margin:16px 0 12px; }
+.tab { flex:1; padding:10px 8px; text-align:center; font-size:14px; font-weight:500; border-radius:10px; background:#fff; color:#5F5E5A; cursor:pointer; }
+.tab.on { background:#1D9E75; color:#fff; }
+.pane { display:none; }
+.pane.on { display:block; }
+.tl { position:relative; padding-left:22px; }
+.tl::before { content:""; position:absolute; left:6px; top:6px; bottom:6px; width:2px; background:#D3D1C7; }
+.ti { position:relative; margin-bottom:15px; }
+.ti::before { content:""; position:absolute; left:-20px; top:6px; width:10px; height:10px; border-radius:50%; background:#1D9E75; }
+.ti.blue::before { background:#378ADD; }
+.ti.gray::before { background:#B4B2A9; }
+.ti.red::before { background:#E24B4A; }
+.tt { font-size:13px; font-weight:600; color:#1D9E75; }
+.ti.gray .tt { color:#5F5E5A; }
+.ti.red .tt { color:#A32D2D; }
+.ti.blue .tt { color:#185FA5; }
+.td { font-size:14px; margin-top:2px; }
+.wx { display:inline-block; font-size:11px; padding:1px 6px; border-radius:4px; margin-left:6px; font-weight:400; }
+.wx.r { background:#E6F1FB; color:#185FA5; }
+.wx.c { background:#F1EFE8; color:#5F5E5A; }
+.wx.s { background:#FAEEDA; color:#854F0B; }
+em { font-style:normal; color:#854F0B; background:#FAEEDA; padding:1px 5px; border-radius:4px; font-size:12px; }
+ul { padding-left:18px; font-size:14px; }
+li { margin-bottom:6px; }
+.tag { display:inline-block; font-size:11px; padding:2px 7px; border-radius:20px; background:#E1F5EE; color:#0F6E56; margin-left:6px; }
+.tag.g { background:#F1EFE8; color:#5F5E5A; }
+.chk { font-size:14px; margin-bottom:7px; }
+.foot { font-size:12px; color:#888780; margin-top:24px; text-align:center; line-height:1.8; }
+</style>
+</head>
+<body>
+
+<h1>乐和乐都 · 10月1日游玩攻略</h1>
+<div class="sub">双版本：有雨版 / 晴天版 · 现场照着走</div>
+
+<div class="good">
+<strong>怎么用：两个版本二选一。</strong><br>
+<strong>版本 A</strong>——出发或游园过程中有雨、地面湿滑，按它走。<br>
+<strong>版本 B</strong>——一路没雨、出太阳，切过去，防晒和客流两个变量要重新算。
+</div>
+
+<div class="grid3">
+  <div class="kv"><div class="k">开园验票</div><div class="v">8:30</div></div>
+  <div class="kv"><div class="k">自驾车停验</div><div class="v">17:00</div></div>
+  <div class="kv"><div class="k">园区停验</div><div class="v">17:30</div></div>
+</div>
+
+<div class="tabs">
+  <div class="tab on" onclick="sw(0,this)">版本 A · 有雨 / 阴天</div>
+  <div class="tab" onclick="sw(1,this)">版本 B · 晴天</div>
+</div>
+
+<div class="pane on">
+  <div class="alert">
+  <strong>版本 A 的适用场景：</strong>出发或游园时有雨、地面湿滑。<br>
+  要处理两件事：<strong>路上湿滑、车程多留半小时</strong>，和<strong>园区地面泥泞</strong>。若雨不大，户外演出和设备一般照常。
+  </div>
+  <div class="card">
+  <div class="tl">
+    <div class="ti blue"><div class="tt">06:00 起床 · 06:30 上路</div><div class="td">雨刷开起来，车距拉大，桥面和隧道口最滑。<em>车程按 2 小时预留，别卡着 8:30 到</em></div></div>
+    <div class="ti blue"><div class="tt">08:00–08:30 抵达</div><div class="td">停车尽量靠大门；若地面湿，别让娃跑</div></div>
+    <div class="ti"><div class="tt">08:30 开园</div><div class="td">进门<strong>先拿当日节目单</strong>确认场次。<em>先上厕所，园区里排队很痛苦</em></div></div>
+    <div class="ti red"><div class="tt">08:35 直奔车行区</div><div class="td">上午动物活跃度最高，下午排队 1 小时起。阴天动物反而更活跃。<br>· <strong>自驾 200 元/车</strong>——按车卖不限人数，<em>4 人以上最划算</em>（排队细则见下方专章）<br>· <strong>网式投食观览车 100 元/人</strong>——猛兽趴车索食<br>· <strong>观光大巴 免费</strong>——<em>务必坐右边</em>，动物多距离近</div></div>
+    <div class="ti red"><div class="tt">09:15 熊猫馆</div><div class="td">青花、青露、巧月、爱莲。<strong>9–10 点半是唯一活跃窗口</strong>，10:30 后队伍排爆</div></div>
+    <div class="ti"><div class="tt">10:00 步行区（约 2 小时）</div><div class="td">大象、树懒、小熊猫、豪猪、巨嘴鸟、黑帽悬猴、猩猩、松鼠猴。<br>付费喂食：长颈鹿、松鼠猴、环尾狐猴、小白兔</div></div>
+    <div class="ti gray"><div class="tt">11:20 妍语花鸟秀（15 分钟）</div><div class="td">花鸟秀剧场，顺路看</div></div>
+    <div class="ti"><div class="tt">12:00 午餐</div><div class="td"><em>别去大门口蜜雪冰城和塔斯汀，节假日排队长到离谱</em><br>推荐熊猫馆旁咖啡馆、园区内套饭</div></div>
+    <div class="ti red"><div class="tt">12:20 / 13:00 皇家大马戏（35 分钟）</div><div class="td">室内剧场，<strong>含在大门票里</strong>。<em>提前 15 分钟进场，坐满就进不去</em></div></div>
+    <div class="ti gray"><div class="tt">13:30 萌兽次元派对 + 非洲鼓舞</div><div class="td">海豚剧场迎宾秀 / 龙骨桥互动。<em>雨不大时户外这场一般照常</em></div></div>
+    <div class="ti red"><div class="tt">14:00 动物狂欢大巡游（25 分钟）</div><div class="td">主环道花车巡游。<strong>雨不大就照常</strong>，值得看一眼但别为它压太多时间</div></div>
+    <div class="ti red"><div class="tt">14:00 / 15:00《海豚联盟》（35 分钟）</div><div class="td">海豚剧场，<strong>需另购约 50 元/人</strong>，大门票不含。<br>国内首创大型实景剧，<em>别省这个钱</em></div></div>
+    <div class="ti"><div class="tt">15:00–16:30 娱乐天堂</div><div class="td">雨不大时设备基本全开：十环过山车（850 米 / 翻转 1440 度）、金刚、辛巴达奇航（80 公里时速激流勇进）<br>带低龄娃 → 虫虫岛（2000㎡ 无动力）、欢乐小人国</div></div>
+    <div class="ti gray"><div class="tt">16:40 森林动物会（18 分钟）</div><div class="td">湖滨路户外派对，雨不大照常</div></div>
+    <div class="ti red"><div class="tt">17:00–17:30 二刷大型设备</div><div class="td"><strong>17:00 后排队锐减</strong>，刷过山车的最佳窗口。<br><em>17:00 自驾车区停验，17:30 全园停验，卡好点</em></div></div>
+  </div>
+  </div>
+</div>
+
+<div class="pane">
+  <div class="alert">
+  <strong>版本 B 的适用场景：</strong>一路没雨、到园区出太阳，就切这一版。<br>
+  差别在四处：<strong>防晒补水</strong>、<strong>人更多</strong>、<strong>动物躲阴要更早看</strong>、<strong>户外演出全部照常</strong>。
+  </div>
+  <div class="card">
+  <div class="tl">
+    <div class="ti"><div class="tt">06:00 起床 · 06:30 上路</div><div class="td">晴天反而更容易堵——好天气会催出更多临时起意的车。<em>仍然按 2 小时预留，6:00 走更稳</em></div></div>
+    <div class="ti"><div class="tt">08:00 抵达排队</div><div class="td">晴天客流上浮，<strong>8:20 售票前就要排到前面</strong>。停车同样靠大门</div></div>
+    <div class="ti"><div class="tt">08:30 开园</div><div class="td">拿节目单。<em>晴天户外演出全开，先把巡游和动物会的时间圈出来</em></div></div>
+    <div class="ti red"><div class="tt">08:35 车行区（比 A 版更不能拖）</div><div class="td">晴天中午猛兽会躲阴凉，<strong>越早看到越多</strong>。<em>10 点后动物活跃度断崖下降</em></div></div>
+    <div class="ti red"><div class="tt">09:15 熊猫馆</div><div class="td">晴天熊猫更爱睡觉，<strong>一定要赶在 9–10 点</strong>，晚了可能只看到四团毛球</div></div>
+    <div class="ti"><div class="tt">10:00 步行区</div><div class="td">晴天逛 2 小时会晒，<em>备好帽子和水，园内水不便宜</em></div></div>
+    <div class="ti gray"><div class="tt">11:20 妍语花鸟秀</div><div class="td">顺路看，顺便躲个太阳</div></div>
+    <div class="ti"><div class="tt">12:00 午餐</div><div class="td">避开大门口蜜雪冰城和塔斯汀。<em>晴天这两家队伍更长</em></div></div>
+    <div class="ti red"><div class="tt">12:20 / 13:00 皇家大马戏</div><div class="td">最晒的时候躲进室内剧场，一举两得。<em>提前 15 分钟进场</em></div></div>
+    <div class="ti red"><div class="tt">14:00 动物狂欢大巡游</div><div class="td">晴天<strong>一定照常</strong>，而且是最出片的一场。主环道提前找位置</div></div>
+    <div class="ti red"><div class="tt">14:00 / 15:00《海豚联盟》</div><div class="td">约 50 元/人另购。晴天建议选 14:00 场，把傍晚留给户外设备</div></div>
+    <div class="ti"><div class="tt">15:00–16:30 娱乐天堂</div><div class="td">设备全开。晴天排队比阴天多 30%，<em>先挑最想玩的，别贪多</em></div></div>
+    <div class="ti gray"><div class="tt">16:40 森林动物会</div><div class="td">湖滨路。晴天照常，光线好适合拍照</div></div>
+    <div class="ti red"><div class="tt">17:00–17:30 二刷设备</div><div class="td"><strong>17:00 后排队锐减</strong>。卡好 17:00 / 17:30 两个停验点</div></div>
+  </div>
+  </div>
+
+  <div class="warn">
+  <strong>晴天版额外要做的事</strong><br>
+  · 防晒霜 + 帽子 + 墨镜，10 月重庆的太阳照样毒<br>
+  · 带水杯，园区接水点补水，晴天一天要喝 1.5L 以上<br>
+  · 娃多备一套衣服（出汗 + 玩水设备会湿）<br>
+  · 客流会明显多于阴天，热门项目排队按 +30% 预估
+  </div>
+</div>
+
+<h2>两个版本都一样的硬规则</h2>
+<div class="card">
+<ul>
+<li><strong>车行区必须是上午第一批</strong>——编队发车、头车领队，错过一班等半小时以上（<strong>自驾排队细则见下方专章</strong>）</li>
+<li><strong>熊猫馆 9–10 点是唯一窗口</strong></li>
+<li><strong>17:00 后是刷设备的黄金半小时</strong></li>
+<li>自驾进猛兽区<strong>严禁开窗、严禁下车</strong></li>
+<li>喂食项目单独收费，<strong>备点现金</strong></li>
+<li>带低龄娃直奔<strong>虫虫岛</strong>和<strong>欢乐小人国</strong></li>
+<li>餐饮避开大门口的<strong>蜜雪冰城和塔斯汀</strong></li>
+<li>门票<strong>不含海豚馆</strong>（约 50 元/人）</li>
+<li>出园<strong>别扔门票</strong>——凭票永川卫星湖美食街 8 折</li>
+</ul>
+</div>
+
+<h2>专章 · 自驾进车行区：怎么排队、提前多久、注意什么</h2>
+
+<div class="alert">
+<strong>先搞清楚一件事：自驾票是"按车卖、不限人数"。</strong><br>
+9 座以下一辆车一张通行票（官方入口平日价 200 元/车，原价 230；不同渠道有标 97、210 的，以当日官方为准）。<br>
+<strong>车上坐几个人都这个价</strong>——4 人以上自驾远比投食车（约 100 元/人）划算。
+</div>
+
+<div class="card">
+<strong style="font-size:14px;">完整流程</strong>
+<div class="tl" style="margin-top:10px;">
+  <div class="ti"><div class="tt">① 先办好自驾手续</div><div class="td">停车场入口附近设有<strong>自驾游办理点</strong>。买/验自驾通行票、签安全须知。<em>这一步要花时间，别漏了直接开到大门口</em></div></div>
+  <div class="ti"><div class="tt">② 8:30 随大流验票入园</div><div class="td">自驾票不等于入园票——<strong>车上每个人都必须有自己的入园门票</strong>，两套票缺一不可</div></div>
+  <div class="ti"><div class="tt">③ 开车到车行区入口排队</div><div class="td">入园后按指示牌开到车行区入口车道，依次排好</div></div>
+  <div class="ti red"><div class="tt">④ 编队发车：发对讲机 + 头车领队</div><div class="td">凑够一批（约 10 辆）放行一次，<strong>入园发对讲机，由园区头车带队走</strong>。全程约 1 小时</div></div>
+  <div class="ti"><div class="tt">⑤ 出来后停好车，再进步行区</div><div class="td">车行区是单向的，出来自驾票即作废，<strong>不能开车二次进入</strong></div></div>
+</div>
+</div>
+
+<div class="warn">
+<strong>要提前多久？——比普通游客再早 20 分钟</strong><br>
+因为多一道"办自驾手续"，同样 8:30 开园，自驾的必须更早到：<br>
+<strong>08:00</strong> 到停车场 → <strong>08:15</strong> 自驾游办理点办手续 → <strong>08:20</strong> 售票，大门口排队 → <strong>08:30</strong> 验票入园 → <strong>08:35</strong> 开到车行区入口 → <strong>08:40 前后第一批发车</strong><br>
+<em>如果 8:30 才到大门口，排到第二批、第三批，等 30 分钟起；9:30 后到，等 1 小时都不稀奇</em>
+</div>
+
+<div class="card">
+<strong style="font-size:14px;">注意事项（安全类，没得商量）</strong>
+<ul style="margin-top:8px;">
+<li><strong>猛兽区严禁开窗、严禁下车</strong>——狮子、老虎、黑熊是散养的，会直接趴到车边。有游客隔着不到两米看到母狮</li>
+<li><strong>唯一能下车的地方：长颈鹿投喂点</strong>。除此处外全程不要开门</li>
+<li>不要开大窗，别把手、手机、相机伸出窗外</li>
+<li>带娃务必<strong>开儿童锁 + 安全座椅</strong>，全程盯住</li>
+<li>跟紧头车，<strong>对讲机听指挥</strong>，不超车、不脱队、不随意停车</li>
+<li>不按喇叭、不闪灯、不外放音乐，别惊扰动物</li>
+<li>不要用自带食物投喂（除指定投喂点付费购买）</li>
+</ul>
+</div>
+
+<div class="card">
+<strong style="font-size:14px;">实操类</strong>
+<ul style="margin-top:8px;">
+<li><strong>提前加满油/充满电</strong>——编队低速跟车，走走停停一小时后油耗不好看</li>
+<li><strong>出发前把玻璃水加满、雨刮检查好</strong>——明天早上下雨，前挡起雾看不清猛兽就白来了</li>
+<li>相机手机提前调好，<strong>隔着车窗拍会反光</strong>，尽量贴近玻璃或用偏振镜</li>
+<li>天窗、敞篷状态可能被拒绝进入，进园前关严</li>
+<li><strong>自驾票单次通行</strong>——想二刷猛兽区只能坐免费大巴</li>
+</ul>
+</div>
+
+<div class="good">
+<strong style="font-size:14px;">到底该选哪个？——给个痛快话</strong>
+<div style="font-size:14px;margin-top:8px;">
+<strong>2–3 人 → 直接坐免费大巴。</strong>效果真的不差，甚至更好：大巴车身高，看动物是俯视，轿车只能平视；大巴玻璃大又干净，隔着自家小车窗拍全是框和反光，<em>明早还下过雨，玻璃更脏</em>。路线完全一样，动物一只不少。省下 200 块。<br><br>
+<strong>4 人以上 → 自驾值。</strong>200 元一车摊下来人均 50，比投食车（100/人）便宜一半，还自由。<br><br>
+<strong>带 2 岁以下宝宝 / 老人行动不便 → 自驾值。</strong>自家车等于移动的休息室：安全座椅、娃随时睡、装备不用扛。<br><br>
+<strong>就想看猛兽趴在车边 → 投食车（100 元/人）。</strong>但有人反馈没座位、站着看，性价比一般。想要亲密互动，不如去长颈鹿投喂点花几十块亲手喂。
+</div>
+</div>
+
+<div class="card">
+<strong style="font-size:14px;">排队太久的备选</strong>
+<ul style="margin-top:8px;">
+<li><strong>免费观光大巴</strong>：性价比最高，<em>一定要坐右边</em>——右边动物多、距离近，坐左边基本啥也看不到。缺点是不停车</li>
+<li><strong>网式投食观览车 100 元/人</strong>：猛兽会趴车索食，刺激。但有游客反馈"没座位、站着看"，见仁见智</li>
+<li>真想要亲密互动，去<strong>长颈鹿投喂点</strong>花几十块亲手喂，比坐投食车实在</li>
+</ul>
+</div>
+
+<h2>今晚准备清单（两版通用）</h2>
+<div class="card">
+<div class="chk">☐ <strong>买票 + 预约</strong>（带身份证）——国庆单日票，「一票玩两天」已暂停</div>
+<div class="chk">☐ <strong>顺手买《海豚联盟》票</strong>——大门票不含，室内王牌</div>
+<div class="chk">☐ <strong>折叠雨衣（不是伞）</strong>——A 版可能用得上，B 版塞包里不占地</div>
+<div class="chk">☐ <strong>薄外套</strong>——早晚偏凉、阴凉处会更凉</div>
+<div class="chk">☐ <strong>防滑鞋</strong>——A 版地面湿滑，别穿新鞋</div>
+<div class="chk">☐ <strong>备用袜子裤子</strong>——娃一定会湿或弄脏</div>
+<div class="chk">☐ <strong>充电宝 + 手机防水袋</strong></div>
+<div class="chk">☐ <strong>车加满油 / 充满电</strong>，检查雨刮、胎压、<strong>玻璃水</strong></div>
+<div class="chk">☐ <strong>确认自驾通行票已买</strong>——它和入园门票是两回事，车上每人都要有入园票</div>
+</div>
+
+<h2>避坑清单</h2>
+<div class="card">
+<ul>
+<li>✗ 别买两日票——国庆「一票玩两天」暂停</li>
+<li>✗ 别 8–9 点才从渝中出发——撞上雨最大 + 全城最高峰</li>
+<li>✗ 别下午才去车行区——排队最久</li>
+<li>✗ 别 17:00 后才想起要去自驾车区——已停止验票</li>
+<li>✗ 别默认所有户外演出都取消——9 点后没雨，大概率照常</li>
+</ul>
+</div>
+
+<h2>参考票价（以购票渠道当日价为准）</h2>
+<div class="card">
+<table>
+<tr><th>项目</th><th style="text-align:left">价格</th></tr>
+<tr><td>成人票</td><td style="text-align:left">约 200 元</td></tr>
+<tr><td>儿童票 / 大学生票</td><td style="text-align:left">约 150 / 85 元（大学生凭身份证+学生证）</td></tr>
+<tr><td>老人票（60–65 岁）</td><td style="text-align:left">100 元</td></tr>
+<tr><td>网式投食观览车</td><td style="text-align:left">100 元/人</td></tr>
+<tr><td>自驾车进野生动物区</td><td style="text-align:left">210 元/车</td></tr>
+<tr><td>观光大巴</td><td style="text-align:left">免费</td></tr>
+<tr><td>《海豚联盟》</td><td style="text-align:left">约 50 元/人（另购）</td></tr>
+<tr><td>《皇家大马戏》</td><td style="text-align:left">已含在大门票内</td></tr>
+</table>
+<div style="font-size:12px;color:#888780;margin-top:8px;">免票：1.2 米以下儿童（每名购票成人限带 1 名）、65 周岁以上老人凭证件，均需窗口换纸质票。</div>
+</div>
+
+<h2>参考演出时间（平日版 · 以现场节目单为准）</h2>
+<div class="card">
+<table>
+<tr><th>节目</th><th>地点</th><th>时间</th><th>备注</th></tr>
+<tr><td>皇家大马戏</td><td>皇家大马戏剧场</td><td>12:20 / 16:00</td><td><span class="tag">室内</span></td></tr>
+<tr><td>海豚联盟</td><td>海豚剧场</td><td>14:00 / 15:00</td><td><span class="tag">室内</span></td></tr>
+<tr><td>妍语花鸟秀</td><td>花鸟秀剧场</td><td>11:20 / 14:30</td><td><span class="tag">室内</span></td></tr>
+<tr><td>萌兽次元派对</td><td>海豚剧场</td><td>13:30</td><td><span class="tag">室内</span></td></tr>
+<tr><td>动物狂欢大巡游</td><td>主环道</td><td>14:00</td><td><span class="tag g">户外 · 无雨照常</span></td></tr>
+<tr><td>非洲鼓舞</td><td>龙骨桥</td><td>13:30</td><td><span class="tag g">户外 · 无雨照常</span></td></tr>
+<tr><td>森林动物会</td><td>湖滨路</td><td>16:40</td><td><span class="tag g">户外 · 无雨照常</span></td></tr>
+</table>
+<div style="font-size:12px;color:#888780;margin-top:8px;">官方提示：因雨、雷、大风停演。10 月 1 日节假日通常加场，进园先拿当日节目单。</div>
+</div>
+
+<h2>交通与应急</h2>
+<div class="card">
+<ul>
+<li><strong>自驾</strong>：成渝环线高速 → 九永高速 → 陈食互通 → 兴龙大道 → 乐和乐都。<em>官方建议走重庆三环高速，永川南收费站下道更近</em></li>
+<li><strong>高铁备选</strong>：重庆北/西/沙坪坝 → 永川东站（25–35 分钟），转 303 路或打车</li>
+<li><strong>永川公交</strong>：25 队汽车站 203 路、客运中心 501 路、城区 303 路，2 元</li>
+<li><strong>景区电话</strong>：023-61179888 / 023-61162876</li>
+</ul>
+</div>
+
+<div class="foot">
+攻略更新于 2026-09-30 ｜ 两个版本按当天实际天气二选一<br>
+演出、票价以景区现场当日公示为准
+</div>
+
+<script>
+function sw(i,el){
+  var t=document.querySelectorAll('.tab'),p=document.querySelectorAll('.pane');
+  for(var k=0;k<t.length;k++){t[k].className='tab';p[k].className='pane';}
+  t[i].className='tab on';p[i].className='pane on';
+}
+</script>
+
+</body>
+</html>
